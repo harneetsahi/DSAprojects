@@ -6,7 +6,7 @@ class LinkedList {
     this.head = null;
   }
 
-  //// append function
+  //// append function - adding to the end of the list
   append(value) {
       const newNode = new Node(value);
 
@@ -21,6 +21,15 @@ class LinkedList {
       current.nextNode = newNode;
     }    
   }
+
+  //// prepend function - adding to the front of the list
+  prepend(value) {
+    const newNode = new Node(value);
+
+    newNode.nextNode = this.head;
+    this.head = newNode;
+  }
+
 
   
 
