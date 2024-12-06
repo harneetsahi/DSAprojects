@@ -52,7 +52,9 @@ class Node {
 
 const list = new LinkedList();
 
-list.append('solar');
+list.append('dog');
+
+list.prepend('alien');
 
 console.log(list);
 
