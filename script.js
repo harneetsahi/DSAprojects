@@ -39,4 +39,12 @@ class Node {
 
 }
 
+// 
+
+const list = new LinkedList();
+
+list.append('solar');
+
+console.log(list);
+
 
