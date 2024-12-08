@@ -57,6 +57,25 @@ class LinkedList {
     return current;      
   }
 
+  //// find node at a given index
+  at(index) { 
+    let current = this.head;
+    let currIndex = 0;
+    
+    while(current.nextNode !== null) {
+      current = current.nextNode;
+      currIndex++;
+      
+      if (currIndex === index) {
+        return current;
+      }
+      
+    }
+    
+    return current;
+      
+  }
+
 
 
   
