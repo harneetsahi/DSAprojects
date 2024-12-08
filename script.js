@@ -30,6 +30,20 @@ class LinkedList {
     this.head = newNode;
   }
 
+  //// count size function
+  countSize() {
+    let count = 0;
+    let current = this.head;
+
+    while(current) {
+      count++;
+      current = current.nextNode;
+    }
+
+    return count;
+  }
+
+
 
   
 
