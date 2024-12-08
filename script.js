@@ -43,6 +43,11 @@ class LinkedList {
     return count;
   }
 
+  //// getHead function
+  getHead() {
+    return this.head;
+  }
+
 
 
   
