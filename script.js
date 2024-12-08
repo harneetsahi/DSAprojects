@@ -76,6 +76,27 @@ class LinkedList {
       
   }
 
+  //// remove the last node
+  pop() {
+    if (!this.head) {
+      return;
+    }
+    
+    if (!this.head.nextNode) {
+      this.head = null;
+      return;
+    }
+    
+    let current = this.head;
+    
+    while(current.nextNode && current.nextNode.nextNode) {
+      current = current.nextNode;  
+    }
+    
+    current.nextNode = null;
+    
+    return list;
+  }
 
 
   
