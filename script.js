@@ -113,6 +113,26 @@ class LinkedList {
   
   }
 
+  //// find a value
+  find(value) {
+    
+    let current = this.head;
+    let index = 0;
+    
+    while(current) {
+      if (current.value === value) {
+        return index;
+      }
+      
+      current = current.nextNode;
+      index++;
+    }
+    
+    return null;
+      
+  }
+
+  
   
 
 }
