@@ -161,6 +161,27 @@ class LinkedList {
 
   }
 
+  //// remove index
+  removeAt(index) {
+    let current = this.head;
+    let currIndex = 0;
+    
+    if (index < 0) return;
+    if (index === 0) {
+      const newNode = this.head.nextNode;
+      this.head = newNode;
+    }
+    
+    while(current && currIndex < index -1 ) {
+      current = current.nextNode;
+      currIndex++;      
+    }
+    
+    current.nextNode = current.nextNode.nextNode;
+ 
+    return list;
+    
+  }
   
   
 
