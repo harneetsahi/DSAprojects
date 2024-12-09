@@ -132,6 +132,35 @@ class LinkedList {
       
   }
 
+  //// insert a value at a certain index
+  insertAt(value, index) {
+    let current = this.head;
+    let currIndex = 0;
+    
+    const newNode = new Node(value);
+    
+    if (index < 0) {
+      return;
+    }
+    
+    if (index === 0) {
+      newNode.nextNode = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    while(current && currIndex < index -1 ) {
+      current = current.nextNode;
+      currIndex++;
+    }
+    
+    newNode.nextNode = current.nextNode;
+    current.nextNode = newNode;
+ 
+    return list;
+
+  }
+
   
   
 
