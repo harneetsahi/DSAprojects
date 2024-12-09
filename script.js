@@ -182,6 +182,20 @@ class LinkedList {
     return list;
     
   }
+
+  //// convert to a string
+  toString() {
+    let current = this.head;
+    let result = '';
+    
+    while(current) {
+      result += '( ' + current.value  + ' ) -> ';
+      current = current.nextNode;    
+   }
+    
+    return result.slice(0 , -4);
+  
+  }
   
   
 
