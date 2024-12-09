@@ -227,6 +227,18 @@ list.append("turtle");
 
 list.prepend('alien');
 
+// testing
+console.log(list);
+console.log(list.toString());
+console.log(list.countSize());
+console.log(list.getHead());
+console.log(list.getTail());
+console.log(list.at(6));
+console.log(list.pop());
+console.log(list.contains('parrot'));
+console.log(list.find('alien'));
+console.log(list.insertAt('coco', 4));
+console.log(list.removeAt(1));
 console.log(list);
 
 
