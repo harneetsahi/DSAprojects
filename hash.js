@@ -49,6 +49,35 @@ class HashMap {
     
   }
 
+  //// get function
+
+  get(key) {
+    const hashCode = this.hash(key);
+
+    // if bucket does not have the hashCode at all
+    if (!this.bucket[hashCode]) {
+      return null;
+    }
+
+    // if exists
+    for (let i = 0; i< this.bucket[hashCode].length; i++) {
+      if (this.bucket[hashCode][i].key === key {
+        return this.bucket[hashCode][i].value;
+      }
+
+    // if key does not exist in the hashCode
+    return null;
+      
+    }
+    
+    
+  }
+
+  //// has function
+
+
+  //// remove function
+
   
   
 }
