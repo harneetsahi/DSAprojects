@@ -6,7 +6,7 @@ class HashMap {
     this.bucket = new Array(this.capacity);
   }
 
-  ///// hash function
+  ///// hash function: creates a hash code for keys
 
   hash(key) {
     let hashCode = 0;
