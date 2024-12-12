@@ -20,7 +20,7 @@ class HashMap {
     
   }
 
-  //// set function
+  //// set function: sets values to particular keys
 
   set(key, value) {
     const hashCode = this.hash(key);
