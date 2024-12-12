@@ -49,7 +49,7 @@ class HashMap {
     
   }
 
-  //// get function
+  //// get function: fetches values for particular keys
 
   get(key) {
     const hashCode = this.hash(key);
