@@ -19,6 +19,36 @@ class HashMap {
     return hashCode;
     
   }
+
+  //// set function
+
+  set(key, value) {
+    const hashCode = this.hash(key);
+
+    // creating a sub array
+    if (!this.bucket[hashCode]) {
+      this.bucket[hashCode] = [];
+    }
+
+    // updating value for the given key
+    for (let i = 0; i<this.bucket[hashCode].length; i++) {
+      if (this.bucket[hashCode][i].key === key) {
+        this.bucket[hashCode[i].value = value;
+        return;
+      }
+    }
+
+    // adding key, value both if key was not found above
+    this.bucket[hashCode].push({key, value});
+
+
+    // grow bucket
+    if (this.bucket.length > this.loadFactor * this.capacity) {
+      this.grow();
+    }
+    
+  }
+
   
   
 }
