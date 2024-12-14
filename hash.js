@@ -69,11 +69,20 @@ class HashMap {
     return null;
       
     }
-    
-    
   }
 
   //// has function
+  has(key) {
+    const hashCode = this.hash(key);
+
+    if (!this.bucket[hashCode]) return false;
+
+    for (let i = 0; i < this.bucket[hashCode].length; i++) {
+      if (this.bucket[hashCode][i].key === key) return true;
+    }
+
+    return false;
+  }
 
 
   //// remove function
