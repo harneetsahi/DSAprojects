@@ -119,6 +119,21 @@ class HashMap {
       this.bucket[i] = [];
     }
   }
+
+
+  //// find keys function
+  keys() {
+    const keys = [];
+
+    for (let i = 0; i < this.bucket.length; i++) {
+      if (this.bucket[i]) {
+        for (let j = 0; j < this.bucket[i].length; j++) {
+          keys.push(this.bucket[i][j].key);
+        }
+      }
+    }
+    return keys;
+  }
   
   
   
