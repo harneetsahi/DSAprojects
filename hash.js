@@ -99,6 +99,18 @@ class HashMap {
     return false;
   }
 
+
+  //// length function
+  length() {
+    let count = 0;
+
+    for (let i = 0; i < this.bucket.length; i++) {
+      if (this.bucket[i]) {
+        count += this.bucket[i].length;
+      }
+    }
+    return count;
+  }
   
   
   
