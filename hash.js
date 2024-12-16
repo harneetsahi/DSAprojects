@@ -86,7 +86,20 @@ class HashMap {
 
 
   //// remove function
+  remove(key) {
+    const hashCode = this.hash(key);
 
+    for (let i = 0; i < this.bucket[hashCode].length; i++) {
+      if (this.bucket[hashCode][i].key === key) {
+        this.bucket[hashCode].splice(i, 1);
+        return;
+      }
+    }
+
+    return false;
+  }
+
+  
   
   
 }
