@@ -111,6 +111,14 @@ class HashMap {
     }
     return count;
   }
+
+
+  //// clear function
+  clear() {
+    for (let i = 0; i < this.bucket.length; i++) {
+      this.bucket[i] = [];
+    }
+  }
   
   
   
