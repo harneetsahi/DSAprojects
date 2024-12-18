@@ -185,7 +185,7 @@ class HashMap {
     }
     this.bucket = newBucket;
   }
-  
-  
-  
+
 }
+
+const test = new HashMap();
