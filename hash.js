@@ -162,6 +162,29 @@ class HashMap {
     }
     return entries;
   }
+
+  //// grow function
+  grow() {
+    this.capacity *= 2;
+
+    const newBucket = new Array(this.capacity);
+
+    for (let i = 0; i < this.bucket.length; i++) {
+      if (this.bucket[i]) {
+        for (let j = 0; j < this.bucket[i].length; j++) {
+          const { key, value } = this.bucket[i][j];
+          const hashCode = this.hash(key);
+
+          if (!newBucket[hashCode]) {
+            newBucket[hashCode] = [];
+          }
+
+          newBucket[hashCode].push({ key, value });
+        }
+      }
+    }
+    this.bucket = newBucket;
+  }
   
   
   
