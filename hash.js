@@ -148,6 +148,20 @@ class HashMap {
     }
     return values;
   }
+
+  //// find entries function
+  entries() {
+    const entries = [];
+
+    for (let i = 0; i < this.bucket.length; i++) {
+      if (this.bucket[i]) {
+        for (let j = 0; j < this.bucket[i].length; j++) {
+          entries.push([this.bucket[i][j].key, this.bucket[i][j].value]);
+        }
+      }
+    }
+    return entries;
+  }
   
   
   
