@@ -201,3 +201,20 @@ test.set("ice cream", "white");
 test.set("jacket", "blue");
 test.set("kite", "pink");
 test.set("lion", "golden");
+
+console.log(test.hash("harnee"));
+console.log(test.get("frog"));
+console.log(test.length());
+console.log(test.set("lion", "fals"));
+console.log(test.get("lion"));
+console.log(test.length());
+console.log(test.has("appl"));
+// console.log(test.clear());
+console.log(test.length());
+console.log(test.keys());
+console.log(test.values());
+console.log(test.entries());
+
+test.set("person", "felisha");
+test.set("persona", "harneet");
+console.log(test.entries());
