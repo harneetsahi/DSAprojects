@@ -134,6 +134,20 @@ class HashMap {
     }
     return keys;
   }
+
+  //// find values function
+  values() {
+    const values = [];
+
+    for (let i = 0; i < this.bucket.length; i++) {
+      if (this.bucket[i]) {
+        for (let j = 0; j < this.bucket[i].length; j++) {
+          values.push(this.bucket[i][j].value);
+        }
+      }
+    }
+    return values;
+  }
   
   
   
