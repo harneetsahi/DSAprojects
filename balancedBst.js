@@ -13,12 +13,26 @@
 //   b.  Calc mid of right subtree and make root of right subtree.
 
 
+
+//// Node class
+
 class Node {
 
   constructor (data) {
     this.data = data;
     this.left = null;
     this.right = null;
+  }
+
+}
+
+
+//// Tree class
+
+class Tree {
+
+  constructor(arr) {
+    this.root = this.buildTree(arr);
   }
 
 }
