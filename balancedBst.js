@@ -35,17 +35,28 @@ class Tree {
     this.root = this.buildTree(arr);
   }
 
+  /// build tree function
   buildTree(arr) {
-
     let sortedArr = [...new Set(arr)].sort((a,b) => a-b);
 
     function helper(sortedArr, start, end) {
       if (start > end) return null;
 
       let mid = start + Math.floor((end - start) / 2);
+
+      let node = new Node(sortedArr[mid]);
+
+      node.left = helper(sortedArr, start, mid-1);
+      node.right = helper(sortedArr, mid+1, end)
+
+      return node;
       
     }
+
+    return helper(sortedArr, 0, sortedArr.length - 1);
     
   }
+
+  ///
 
 }
