@@ -13,3 +13,5 @@ Stores key value pairs
 
 # balanced binary search tree (code in balancedBst.js)
 
+A balanced binary tree is a type of binary tree where the height difference (or balance factor) between the left and right subtrees of any node is minimal.
+
