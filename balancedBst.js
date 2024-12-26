@@ -30,7 +30,6 @@ class Node {
 //// Tree class
 
 class Tree {
-
   constructor(arr) {
     this.root = this.buildTree(arr);
   }
