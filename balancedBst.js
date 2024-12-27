@@ -56,6 +56,40 @@ class Tree {
     
   }
 
-  ///
+  /// insert function
+  insert(value) {
+    
+    let newNode = new Node(value);
+    
+    if (!this.root) {
+      this.root = newNode;
+      return
+    }
+    
+    let current = this.root;
+    
+    while(current) {
+      
+      if (value < current.data) {
+        
+          if (!current.left) {
+            current.left = newNode;
+            return
+          }        
+          current = current.left
+        
+      } else if (value > current.data ) {
+       
+        if (!current.right) {
+          current.right = newNode
+          return;
+        }
+        current = current.right;
+        
+      } else {
+        return;
+      }
+    }
+  }
 
 }
