@@ -34,7 +34,7 @@ class Tree {
     this.root = this.buildTree(arr);
   }
 
-  /// build tree function
+  //// build tree function
   buildTree(arr) {
     let sortedArr = [...new Set(arr)].sort((a,b) => a-b);
 
@@ -56,7 +56,7 @@ class Tree {
     
   }
 
-  /// insert function
+  //// insert function
   insert(value) {
     
     let newNode = new Node(value);
@@ -91,5 +91,41 @@ class Tree {
       }
     }
   }
+
+  //// delete function
+
+  deleteItem(value) {
+    this.root = this._deleteNode(this.root, value);
+  }
+
+  _deleteNode(root, value) {
+
+    if (!root) return root;
+
+    if (value < root.data) {
+      root.left = this._deleteNode(root.left, value);
+    } else if (value > root.data) {
+      root.right = this._deleteNode(root.right, value);
+    } else {
+      if (!root.left && !root.right) {
+        return null
+      } else if (!root.left) {
+        return root.right
+      } else if (!root.right) {
+        return root.left;
+      }
+
+      root.data = this._findSuccessor(root.right);
+      root.right = this._deleteNode(root.right, root.data);
+      
+    }
+    return root;
+
+  }
+
+    
+
+
+  ////
 
 }
