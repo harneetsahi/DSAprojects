@@ -120,7 +120,17 @@ class Tree {
       
     }
     return root;
+  }
 
+  _findSuccessor(root) {
+    
+    let minVal = root.data;
+    
+    while(root.left) {
+      minVal = root.left.data;
+      root = root.left;
+    }
+    return minVal;
   }
 
     
