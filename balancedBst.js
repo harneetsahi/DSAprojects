@@ -133,6 +133,25 @@ class Tree {
     return minVal;
   }
 
+  ///// find item function
+  find(value) {
+    
+    let current = this.root;
+    
+    while (current) {
+      
+    if (value < current.data) {
+      current = current.left;
+    } else if (value > current.data) {
+      current = current.right;
+    } else {
+      return current;
+    }
+    }
+    
+    return null;
+  }
+
     
 
 
