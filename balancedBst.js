@@ -152,6 +152,24 @@ class Tree {
     return null;
   }
 
+  ///// find function using recursion
+  findRec(value) {
+    
+    function searchNode(node, value) {
+      
+      if (node === null) return null;
+      
+      if (value < node.data) {
+          return searchNode(node.left, value);
+      } else if (value > node.data) {
+          return searchNode(node.right, value);
+      } else {
+          return node; 
+      } 
+    }
+    return searchNode(this.root, value)
+  }
+
     
 
 
