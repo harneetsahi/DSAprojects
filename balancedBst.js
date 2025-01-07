@@ -200,7 +200,7 @@ class Tree {
     }
   }
 
-  ////// inorder function
+  ////// inorder function and helper
   inOrder(callback) {
     
     if (typeof callback !== 'function') {
@@ -228,6 +228,28 @@ class Tree {
   }
 
 
-  ///// preOrder function
+  ///// preOrder function and helper
+   preOrder(callback) {
+      if (typeof callback !== 'function') {
+      throw new Error('Provide a function')
+    }
+    
+    this._preOrderHelper(this.root, callback)
+    
+  }
+  
+  _preOrderHelper(current, callback) {
+    
+   if (!current) return;
+   
+    // root, left, right
+   callback(current);
+   this._preOrderHelper(current.left, callback);
+   this._preOrderHelper(current.right, callback);
+    
+  }
+
+
+  ///// post order function and helper
 
 }
