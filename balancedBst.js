@@ -173,6 +173,33 @@ class Tree {
     
 
 
-  ////
+  //// level order
+  levelOrder(callback) {
+       
+    if (typeof callback !== 'function') {
+      throw new Error ('A callback is required')
+    }
+    
+    let current = this.root;
+    let queue = [current];
+    
+    if (current === null) return;
+    
+    while(queue.length > 0) {   
+      const currentNode = queue.shift();
+      
+      callback(currentNode);
+      
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      } 
+    }
+  }
+
+  ////// inorder function
 
 }
