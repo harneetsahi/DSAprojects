@@ -201,5 +201,33 @@ class Tree {
   }
 
   ////// inorder function
+  inOrder(callback) {
+    
+    if (typeof callback !== 'function') {
+      throw new Error('Provide a function')
+    }
+    
+    this._inOrderHelper(this.root, callback)  
+    
+  }
+  
+  _inOrderHelper(current, callback) {
+
+    if (!current) return;
+    
+    // traverse left
+    this._inOrderHelper(current.left, callback)
+    
+    // traverse root
+    callback(current);
+    
+    // traverse right
+    
+    this._inOrderHelper(current.right, callback)
+    
+  }
+
+
+  ///// preOrder function
 
 }
