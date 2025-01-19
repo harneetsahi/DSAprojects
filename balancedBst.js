@@ -286,6 +286,22 @@ class Tree {
     
   }
 
+  /////// depth
+  
+  depth(node, currentNode = this.root, currentDepth = 0) {
+    
+    if (currentNode === null) return -1;
+    
+    if (currentNode === node) return currentDepth;
+    
+    let leftDepth = this.depth(node, currentNode.left, currentDepth + 1);
+    let rightDepth = this.depth(node, currentNode.right, currentDepth + 1);
+    
+    return Math.max(leftDepth, rightDepth);
+    
+  }
+  
+
 
   ///// 
 }
