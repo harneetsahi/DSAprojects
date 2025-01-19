@@ -270,6 +270,22 @@ class Tree {
     
   }
 
+  ////// height function
+  height(node) {
+        
+    if (!node) return -1;
+    
+    if (!node.left && !node.right) {
+      return 0;
+    } 
+    
+    let leftHeight = this.height(node.left);
+    let rightHeight = this.height(node.right);
+    
+    return 1 + Math.max(leftHeight, rightHeight);
+    
+  }
+
 
   ///// 
 }
