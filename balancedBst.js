@@ -252,4 +252,24 @@ class Tree {
 
   ///// post order function and helper
 
+  postOrder(callback) {
+      if (typeof callback !== 'function') {
+      throw new Error('Provide a function')
+    }
+    
+    this._postOrderHelper(this.root, callback)
+  }
+  
+  _postOrderHelper(current, callback) {
+    
+   if (!current) return;
+   // root, left, right
+    this._postOrderHelper(current.left, callback);
+    this._postOrderHelper(current.right, callback);
+    callback(current);
+    
+  }
+
+
+  ///// 
 }
