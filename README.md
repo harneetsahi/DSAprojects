@@ -1,4 +1,5 @@
-## DSA projects repo contains linkedList project, hashMap project, binary search tree project by The Odin Project.
+## DSA projects
+> repo contains linkedList project, hashMap project, binary search tree project by The Odin Project.
 
 This folder has different javascript files for each of these projects.
 Refer to the following for reference to respective files:
