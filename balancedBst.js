@@ -300,6 +300,26 @@ class Tree {
     return Math.max(leftDepth, rightDepth);
     
   }
+
+  /////// is balanced
+  
+  isBalanced(node) {
+    
+    // if node is null, it's considered a balanced tree
+    if (node === null) return true;
+    
+    // get heights
+    let leftHeight = this.height(node.left);
+    let rightHeight = this.height(node.right);
+
+    // difference greater than 1 is unbalanced
+    if (Math.abs(leftHeight - rightHeight) > 1) {
+      return false;
+    }
+    
+   return this.isBalanced(node.left) && this.isBalanced(node.right);
+    
+  }
   
 
 
