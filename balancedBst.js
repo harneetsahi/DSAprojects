@@ -320,6 +320,32 @@ class Tree {
    return this.isBalanced(node.left) && this.isBalanced(node.right);
     
   }
+
+   ////// rebalance with inorder travesal
+  
+//   inOrderTraversal(node, result = []) {
+    
+//     if (!node) return null;
+    
+//     this.inOrderTraversal(node.left, result);
+//     result.push(node.data);
+//     this.inOrderTraversal(node.right, result);
+    
+//     return result;
+    
+//   }
+  
+  rebalance() {
+    
+    // const sortedArr = this.inOrderTraversal(node);
+    
+    let newArr = [];
+    
+    this.inOrder(node => newArr.push(node.data));
+    
+    return this.buildTree(newArr);
+  }
+  
   
 
 
