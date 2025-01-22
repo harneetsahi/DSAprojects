@@ -352,3 +352,29 @@ let arr = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324];
 
 let tree = new Tree(arr);
 
+tree.buildTree(arr, 0, arr.length - 1);
+
+// console.log(tree.root);
+// console.log(tree.depth(tree.root.left.right.right))
+// console.log(tree.height(tree.root));
+console.log('is tree balanced?')
+console.log(tree.isBalanced(tree.root));
+
+console.log('this is the tree');
+console.log(tree);
+
+tree.insert(12);
+// console.log(tree.insert(321));
+
+console.log('new tree after insertion')
+console.log(tree);
+
+console.log('is tree balanced?')
+console.log(tree.isBalanced(tree.root));
+
+console.log('rebalancing the tree...')
+tree.root = tree.rebalance();
+
+console.log('is tree balanced now?');
+console.log(tree.isBalanced(tree.root));
+
