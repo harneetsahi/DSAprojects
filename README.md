@@ -4,15 +4,15 @@
 This folder has different javascript files for each of these projects.
 Refer to the following for reference to respective files:
 
-### linked-list (code in script.js)
+### Linked-list (code in script.js)
 
 As part of DSA, linkedlist allows us to add and remove elements with ease since it contains reference to the next node.
 
-### hashMap (code in hash.js)
+### HashMap (code in hash.js)
 
 Stores key-value pairs
 
-### balanced binary search tree (code in balancedBst.js)
+### Balanced Binary Search Tree (code in balancedBst.js)
 
 A balanced binary tree is a type of binary tree where the height difference (or balance factor) between the left and right subtrees of any node is minimal.
 
