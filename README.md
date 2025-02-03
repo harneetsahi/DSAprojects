@@ -1,7 +1,7 @@
 ## Data Structures and Algorithms (DSA)
 > repo contains some DSA concepts like linkedList project, hashMap project, binary search tree project by The Odin Project.
 
-This folder has different javascript files for each of these projects.
+This repo has different javascript files for each of these projects.
 Refer to the following for reference to respective files:
 
 ### Linked-list (code in script.js)
